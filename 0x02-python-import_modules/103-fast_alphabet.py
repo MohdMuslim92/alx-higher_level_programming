@@ -1,3 +1,3 @@
-import string
-upper_alphabet = string.ascii_uppercase
-print(upper_alphabet)
+from upper import print_upper_letters
+print_upper_letters()
+print("")
