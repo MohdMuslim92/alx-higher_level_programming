@@ -6,4 +6,7 @@ if __name__ == "__main__":
             for name in sorted(dir(hidden_4))
             if not name.startswith("__")
             ]
-    print("\n".join(names))
+    if len(names) == 0:
+        exit()
+    else:
+        print("\n".join(names))
