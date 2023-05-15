@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 import this
-print(this.s.splitlines()[1])
+print(this.s.splitlines()[1], end="")
