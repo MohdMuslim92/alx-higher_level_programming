@@ -1,3 +1,5 @@
 #!/usr/bin/python3
 import this
-print(this.s)
+zen = this.s
+half = len(zen) // 2
+print(zen[:half])
