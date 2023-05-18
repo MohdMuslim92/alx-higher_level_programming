@@ -10,3 +10,7 @@
 * 7-update_dictionary.py : a function that replaces or adds key/value in a dictionary
 * 8-simple_delete.py : a function that deletes a key in a dictionary
 * 9-multiply_by_2.py : a function that returns a new dictionary with all values multiplied by 2
+* 12-roman_to_int.py : a function that converts a Roman numeral to an integer
+* 100-weight_average.py : a function that returns the weighted average of all integers tuple (<score>, <weight>)
+* 101-square_matrix_map.py : a function that computes the square value of all integers of a matrix using map
+* 102-complex_delete.py : a function that deletes keys with a specific value in a dictionary
