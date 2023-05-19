@@ -19,36 +19,25 @@ listint_t *insert_node(listint_t **head, int number)
 	if (node == NULL)
 		return (NULL);
 	node->n = number;
-	current = *head;
+	node->next = NULL;
 	if (*head == NULL)
 	{
-		node->next = NULL;
 		*head = node;
 		return (node);
 	}
-	if (current->n > number)
+	if ((*head)->n > number)
 	{
-		node->next = current;
+		node->next = *head;
 		*head = node;
 		return (node);
 	}
-	while (current != NULL)
+	current = *head;
+	while (current->next != NULL && current->next->n < number)
 	{
-		if (current->next->n > number || current->next == NULL)
-		{
-			temp = current->next;
-			current->next = node;
-			node->next = temp;
-			return (node);
-		}
-		if (current->next == NULL)
-		{
-			current->next = node;
-			node->next = NULL;
-			return (node);
-		}
-	current = current->next;
+		current = current->next;
 	}
-	free(node);
-	return (NULL);
+	temp = current->next;
+	current->next = node;
+	node->next = temp;
+	return (node);
 }
