@@ -1,0 +1,42 @@
+#!/usr/bin/python3
+>>> def matrix_divided(matrix, div):
+...     if not isinstance(matrix, list):
+...         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+...     row_lengths = []
+...     for row in matrix:
+...         if not isinstance(row, list):
+...             raise TypeError("matrix must be a matrix (list of lists) of     integers/floats")
+...         row_lengths.append(len(row))
+...         if len(set(row_lengths)) != 1:
+...             raise TypeError("Each row of the matrix must have the same size")
+...         for element in row:
+...             if not isinstance(element, (int, float)):
+...                 raise TypeError("matrix must be a matrix (list of lists) of     integers/floats")
+...             if not isinstance(div, (int, float)):
+...                 raise TypeError("div must be a number")
+...             if div == 0:
+...                 raise ZeroDivisionError("division by zero")
+...             new_matrix = []
+...             for row in matrix:
+...                 new_row = []
+...                 for element in row:
+...                     new_element = round(element / div, 2)
+...                     new_row.append(new_element)
+...                 new_matrix.append(new_row)
+...         return new_matrix
+>>> matrix = [[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+>>> divisor = 2
+>>> result = matrix_divided(matrix, divisor)
+>>> print(result)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+[[1, 2, 3], [4, 5, 6]]
+>>> matrix = [[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+>>> divisor = 0
+>>> result = matrix_divided(matrix, divisor)
+>>> print(result)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+import doctest
+>>> doctest.testmod()
