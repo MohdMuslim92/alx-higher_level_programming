@@ -1,2 +1,1 @@
 0
-No int object created, the code include print statements that work with string literals
