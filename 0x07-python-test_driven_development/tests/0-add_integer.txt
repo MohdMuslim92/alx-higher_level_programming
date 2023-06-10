@@ -4,9 +4,12 @@
 ...         raise TypeError("a must be an integer")
 ...     if not isinstance(b, (int, float)):
 ...         raise TypeError("b must be an integer")
-...     a = int(a)
-...     b = int(b)
+...     if isinstance(a, float):
+...         a = int(a)
+...     if isinstance(a, float):
+...         b = int(b)
 ...     return a + b
+
 >>> add_integer(1, 2)
 3
 >>> add_integer(5.3, 7)
@@ -29,4 +32,4 @@ Traceback (most recent call last):
 TypeError: b must be an integer
 
 import doctest
-doctest.testmod()
+>>> doctest.testmod()
