@@ -9,40 +9,44 @@
 ...         row_lengths.append(len(row))
 ...         if len(set(row_lengths)) != 1:
 ...             raise TypeError("Each row of the matrix must have the same size")
+...     if not isinstance(div, (int, float)):
+...         raise TypeError("div must be a number")
+...     if div == 0:
+...         raise ZeroDivisionError("division by zero") 
+...     new_matrix = []
+...     for row in matrix:
+...         new_row = []
 ...         for element in row:
 ...             if not isinstance(element, (int, float)):
-...                 raise TypeError("matrix must be a matrix (list of lists) of     integers/floats")
-...             if not isinstance(div, (int, float)):
-...                 raise TypeError("div must be a number")
-...             if div == 0:
-...                 raise ZeroDivisionError("division by zero")
-...             new_matrix = []
-...             for row in matrix:
-...                 new_row = []
-...                 for element in row:
-...                     new_element = round(element / div, 2)
-...                     new_row.append(new_element)
-...                 new_matrix.append(new_row)
-...         return new_matrix
+...                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+...             new_element = round(element / div, 2)
+...             new_row.append(new_element)
+...         new_matrix.append(new_row)
+
+...     return new_matrix
 >>> matrix = [[2, 4, 6], [8, 10, 12], [14, 16, 18]]
 >>> divisor = 2
 >>> result = matrix_divided(matrix, divisor)
 >>> print(result)
-[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
-[[1, 2, 3], [4, 5, 6]]
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+>>> matrix = [[2, 4], [4, 8]]
+>>> divisor = 2.2
+>>> result = matrix_divided(matrix, divisor)
+>>> print(result)
+[[0.90, 1.81], [1.81, 3.63]]
 >>> matrix = [[3, 9], [12, 15, 3]]
 >>> divisor = 3
 >>> result = matrix_divided(matrix, divisor)
 >>> print(result)
 Traceback (most recent call last):
-...
+    ...
 TypeError: Each row of the matrix must have the same size
 >>> matrix = [[3, ,'9']], [15, 3]]
 >>> divisor = 3
 >>> result = matrix_divided(matrix, divisor)
 >>> print(result)
 Traceback (most recent call last):
-...
+    ...
 matrix must be a matrix (list of lists) of integers/floats
 div must be a number
 >>> matrix = [[2, 4, 6], [8, 10, 12], [14, 16, 18]]
@@ -50,7 +54,7 @@ div must be a number
 >>> result = matrix_divided(matrix, divisor)
 >>> print(result)
 Traceback (most recent call last):
-...
+    ...
 ZeroDivisionError: division by zero
 
 import doctest
