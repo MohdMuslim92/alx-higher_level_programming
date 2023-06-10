@@ -13,7 +13,6 @@
 ...             flag = 0
 ...             continue
 ...         print(c, end="")
-...     print()
 
 >>> text_indentation("Hello")
 Hello
