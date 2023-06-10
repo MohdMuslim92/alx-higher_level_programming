@@ -3,7 +3,7 @@
 """This module creates addition function.
 :param a: The first integer or float.
 :param b: The second integer or float. Defaults to 98.
-:raises TypeError: If `a` is not an integer or float, or if `b` is not an integer or float.
+:raises TypeError: If `a` or 'b' is not an integer or float
 :return: The addition of `a` and `b` as an integer."""
 
 
