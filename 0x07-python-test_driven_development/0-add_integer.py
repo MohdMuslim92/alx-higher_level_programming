@@ -1,10 +1,16 @@
 #!/usr/bin/python3
 
-"""This module creates addition function."""
+"""This module creates addition function.
+:param a: The first integer or float.
+:param b: The second integer or float. Defaults to 98.
+:raises TypeError: If `a` is not an integer or float, or if `b` is not an integer or float.
+:return: The addition of `a` and `b` as an integer."""
 
 
 def add_integer(a, b=98):
-    """Function that adds two numbers."""
+    """Function that adds two numbers.
+    :raises TypeError: if 'a' or 'b' is not an integer or float
+    :return: The addition of `a` and `b` as an integer."""
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
