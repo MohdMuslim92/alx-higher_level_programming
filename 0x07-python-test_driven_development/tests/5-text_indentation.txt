@@ -18,19 +18,21 @@
 >>> text_indentation("Hello")
 Hello
 >>> text_indentation("Hello.")
-Hello\n
+Hello\n\n
 >>> text_indentation("Hello:")
-Hello\n
+Hello\n\n
 >>> text_indentation("Hello. man")
-Hello\nman
+Hello\n\nman
 >>> text_indentation("Hello: man")
-Hello\nman
+Hello\n\nman
 >>> text_indentation("Hello? man")
-Hello\nman
+Hello\n\nman
 >>> text_indentation("Hello. man")
-Hello\nman
+Hello\n\nman
 >>> text_indentation("Hello. how are you?")
-Hello\n how are you\n
+Hello\n\nhow are you\n\n
+>>> text_indentation("")
+
 >>> text_indentation(1)
 Traceback (most recent call last):
     ...
