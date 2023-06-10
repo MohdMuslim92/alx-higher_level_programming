@@ -7,13 +7,13 @@ def matrix_divided(matrix, div):
     """Function that divides every element in a matrix by a divisor"""
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) "
-                "of integers/floats")
+                        "of integers/floats")
 
     row_lengths = []
     for row in matrix:
         if not isinstance(row, list):
             raise TypeError("matrix must be a matrix (list of lists) "
-                    "of integers/floats")
+                            "of integers/floats")
         row_lengths.append(len(row))
 
     if len(set(row_lengths)) != 1:
@@ -30,7 +30,7 @@ def matrix_divided(matrix, div):
         for element in row:
             if not isinstance(element, (int, float)):
                 raise TypeError("matrix must be a matrix (list of lists) "
-                        "of integers/floats")
+                                "of integers/floats")
             new_element = round(element / div, 2)
             new_row.append(new_element)
         new_matrix.append(new_row)
