@@ -23,6 +23,7 @@ class BaseGeometry(object):
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
     """Class Rectange that inherits BaseGeometry with
     Instantiation with width and height that get validated
