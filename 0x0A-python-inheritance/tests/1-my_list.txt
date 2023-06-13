@@ -16,6 +16,3 @@
 >>> my_list = MyList([3, 3, 3, 3, 3])
 >>> my_list.print_sorted()
 [3, 3, 3, 3, 3]
-
-import doctest
->>> doctest.testmod()
