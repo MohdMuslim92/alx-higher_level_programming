@@ -101,3 +101,38 @@
 				139926795932424
 				>>> a += [4]
 				>>> id(a)
+* 100-magic_string.py : a function magic_string() that returns a string "BestSchool" n times the number of the iteration
+* 101-locked_class.py : a class LockedClass with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called first_name
+* 103 : a = 1
+		b = 1
+		Assuming we are using a CPython implementation of Python3 with default options/configuration:
+	* 103-line1.txt : How many int objects are created by the execution of the first line of the script?
+	* 103-line2.txt : How many int objects are created by the execution of the second line of the script
+* 104 : a = 1024 
+		b = 1024 
+		del a 
+		del b 
+		c = 1024
+
+		Assuming we are using a CPython implementation of Python3 with default options/configuration: 
+
+		* How many int objects are created by the execution of the first line of the script?
+
+		* How many int objects are created by the execution of the second line of the script ?
+
+		* After the execution of line 3, is the int object pointed by a deleted?
+
+		* After the execution of line 4, is the int object pointed by b deleted?
+
+		* How many int objects are created by the execution of the last line of the script ?
+* 105 : print("I") 
+		print("Love") 
+		print("Python")
+
+		Assuming we are using a CPython implementation of Python3 with default options/configuration:
+
+		* Before the execution of line 2 (print("Love")), how many int objects have been created and are still in memory? (105-line1.txt)
+
+		* Why?
+
+
