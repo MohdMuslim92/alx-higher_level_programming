@@ -9,4 +9,5 @@ def read_file(filename=""):
     using with statement"""
     with open(filename, encoding="UTF8") as my_file:
         lines = my_file.read().rstrip()
-    print(lines)
+    if lines:
+        print(lines)
