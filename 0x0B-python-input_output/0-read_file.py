@@ -9,7 +9,7 @@ def read_file(filename=""):
     using with statement"""
     with open(filename, encoding="UTF8") as my_file:
         while True:
-            lines = my_file.read(4096).rstrip()
+            lines = my_file.read(4096).rstrip('\n')
             if not lines:
                 break
             if lines:
