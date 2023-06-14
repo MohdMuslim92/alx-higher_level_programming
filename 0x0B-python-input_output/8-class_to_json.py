@@ -6,14 +6,16 @@ for JSON serialization of an object"""
 
 
 def class_to_json(obj):
-    """Function that returns the dictionary description with simple data structure
-    (list, dictionary, string, integer, and boolean) for JSON serialization of an object.
+    """Function that returns the dictionary description with
+    simple data structure (list, dictionary, string, integer,
+    and boolean) for JSON serialization of an object.
 
     Args:
         obj: An instance of a class.
 
     Returns:
-        dict: The dictionary representation of the object for JSON serialization.
+        dict: The dictionary representation of the object for
+        JSON serialization.
     """
     attributes = vars(obj)
     json_dict = {}
@@ -23,4 +25,3 @@ def class_to_json(obj):
             json_dict[attr] = value
 
     return json_dict
-
