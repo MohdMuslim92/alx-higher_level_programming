@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+import csv
 
 """This module defines a class Base"""
 
@@ -131,5 +132,47 @@ class Base:
                 json_string = file.read()
                 dicts = cls.from_json_string(json_string)
                 return [cls.create(**dictionary) for dictionary in dicts]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Serialize instances to a CSV file.
+
+        Args:
+            list_objs (list): List of instances to be serialized.
+        """
+
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as file:
+            write = csv.writer(file)
+            for obj in list_objs:
+                write.writerow(obj.to_csv_row())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Deserialize instances from a CSV file.
+
+        Returns:
+            list: List of instances deserialized from the CSV file.
+        """
+
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r") as file:
+                read = csv.reader(file)
+                instances = []
+                for row in read:
+                    obj_dict = {
+                            "id": int(row[0]),
+                            "size": int(row[1]),
+                            "x": int(row[2]),
+                            "y": int(row[3])
+                            }
+                    instance = cls.create(**obj_dict)
+                    instances.append(instance)
+                return instances
         except FileNotFoundError:
             return []
