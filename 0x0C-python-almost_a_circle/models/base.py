@@ -67,7 +67,51 @@ class Base:
             '.json' to it.
         """
 
+        if list_objs is None:
+            list_objs = []
         filename = cls.__name__ + ".json"
         with open(filename, "w") as file:
             file.write(cls.to_json_string(
                 [obj.to_dictionary() for obj in list_objs]))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Return the list of dictionaries from a JSON string.
+
+        Args:
+            json_string (str): JSON string representing a list of
+            dictionaries.
+
+        Returns:
+            list: List of dictionaries represented by the JSON string.
+        """
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Create an instance with attributes set from a dictionary.
+
+        Args:
+            **dictionary (dict): Double pointer to a dictionary
+            containing attribute names and values.
+
+        Returns:
+            Base: Instance of the class with attributes set from
+            the dictionary.
+        """
+
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        else:
+            raise ValueError("Invalid class name.")
+
+        dummy.update(**dictionary)
+
+        return dummy
