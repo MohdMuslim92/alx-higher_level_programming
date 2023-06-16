@@ -102,3 +102,7 @@ class Square(Rectangle):
                 'x': self.x,
                 'y': self.y
                 }
+
+    def to_csv_row(self):
+        """Return a list representing a single row in the CSV file."""
+        return [self.id, self.size, self.x, self.y]
