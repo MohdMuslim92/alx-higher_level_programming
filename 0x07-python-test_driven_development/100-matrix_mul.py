@@ -58,7 +58,7 @@ def matrix_mul(m_a, m_b):
     a_row_size = len(m_a[0])
     b_row_size = len(m_b[0])
     if any(len(row) != a_row_size for row in m_a):
-        raise TypeError("Each row of m_a must be of the same size")
+        raise TypeError("each row of m_a must be of the same size")
     if any(len(row) != b_row_size for row in m_b):
         raise TypeError("each row of m_b must be of the same size")
 
