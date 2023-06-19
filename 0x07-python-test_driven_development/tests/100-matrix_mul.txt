@@ -61,7 +61,3 @@ TypeError: m_a should contain only integers or floats
 Traceback (most recent call last):
     ...
 TypeError: m_b should contain only integers or floats
-
-
-import doctest
->>> doctest.testmod()
