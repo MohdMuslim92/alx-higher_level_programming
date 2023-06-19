@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""This module defines a function matrix_mul() that multiplies two
+matrix, in order for the matrix to be valid for multiplication
+the rows of the first matrix should be equals to the columns of
+the second matrix"""
 def matrix_mul(m_a, m_b):
     """
     Multiplies two matrices and returns the result.
