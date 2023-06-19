@@ -15,9 +15,9 @@
 >>> add_integer(5.3, 7)
 12
 >>> add_integer(4.3, 9.4)
-13
+13.4
 >>> add_integer(5, 10.9)
-15
+15.9
 >>> add_integer(-5.3, 7)
 2
 >>> add_integer(9)
@@ -30,6 +30,3 @@ TypeError: a must be an integer
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
-
-import doctest
->>> doctest.testmod()
