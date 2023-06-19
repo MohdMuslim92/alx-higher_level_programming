@@ -3,6 +3,8 @@
 matrix, in order for the matrix to be valid for multiplication
 the rows of the first matrix should be equals to the columns of
 the second matrix"""
+
+
 def matrix_mul(m_a, m_b):
     """
     Multiplies two matrices and returns the result.
@@ -27,10 +29,10 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_a must be a list or m_b must be a list")
 
     # Validate m_a and m_b are lists of lists
-    if not all(isinstance(row, list) for row in m_a) or not all(
-            isinstance(row, list) for row in m_b):
-        raise TypeError(
-                "m_a must be a list of lists or m_b must be a list of lists")
+    if not all(isinstance(row, list) for row in m_a):
+        raise TypeError("m_a must be a list of lists")
+    if not all(isinstance(row, list) for row in m_b):
+        raise TypeError("m_b must be a list of lists")
 
     # Validate m_a and m_b are not empty
     if len(m_a) == 0 or len(m_a[0]) == 0:
