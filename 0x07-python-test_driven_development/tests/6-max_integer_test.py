@@ -74,6 +74,13 @@ class MaxIntegerTest(unittest.TestCase):
         result = max_integer([5, 5, 5, 5])
         self.assertEqual(result, 5)
 
+    def test_max_in_the_middle(self):
+        """Test the max_integer function with a list of where the max
+        number in the middle of the list
+        The expected result is the middle number which is the max"""
+        result = max_integer([1, 2, 5, 3, 4])
+        self.assertEqual(result, 5)
+
     def test_large_list(self):
         """
         Test the max_integer function with a large list of numbers.
