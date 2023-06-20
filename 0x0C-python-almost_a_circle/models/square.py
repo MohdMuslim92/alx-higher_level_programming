@@ -1,7 +1,24 @@
 #!/usr/bin/python3
 from models.rectangle import Rectangle
 
-"""This module defines a class Square that inherits from Rectangle"""
+"""
+This module defines the Square class, a subclass of the Base class.
+
+The Square class represents a square shape and inherits common
+attributes and methods from the Base class.
+It provides additional attributes and methods specific to squares,
+such as side length and area calculation.
+
+Classes:
+    Square: Represents a square shape and inherits from the Base class.
+
+Module Functions:
+    None
+
+Exceptions:
+    None
+
+"""
 
 
 class Square(Rectangle):

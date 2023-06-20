@@ -2,7 +2,26 @@
 import json
 import csv
 
-"""This module defines a class Base"""
+"""
+This module defines the Base class and its related methods for
+serialization and deserialization.
+
+The Base class serves as the base class for other classes in the
+project. It provides functionality for object
+creation, serialization to JSON and CSV formats, and deserialization
+from JSON and CSV formats.
+
+Classes:
+    Base: The base class that provides common functionality for other
+    classes.
+
+Module Functions:
+    None
+
+Exceptions:
+    None
+
+"""
 
 
 class Base:

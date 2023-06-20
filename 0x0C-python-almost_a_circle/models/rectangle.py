@@ -1,7 +1,25 @@
 #!/usr/bin/python3
 from models.base import Base
 
-"""This module defines a class Rectangle that inherits from Base"""
+"""
+This module defines the Rectangle class, a subclass of the Base class.
+
+The Rectangle class represents a rectangle shape and inherits common
+attributes and methods from the Base class.
+It provides additional attributes and methods specific to rectangles,
+such as width, height, and area calculation.
+
+Classes:
+    Rectangle: Represents a rectangle shape and inherits from the Base
+    class.
+
+Module Functions:
+    None
+
+Exceptions:
+    None
+
+"""
 
 
 class Rectangle(Base):
