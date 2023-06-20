@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
-
 """
 This module defines the Square class, a subclass of the Base class.
 
@@ -19,6 +17,7 @@ Exceptions:
     None
 
 """
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):

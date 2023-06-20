@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-import json
-import csv
-
 """
 This module defines the Base class and its related methods for
 serialization and deserialization.
@@ -22,6 +19,8 @@ Exceptions:
     None
 
 """
+import json
+import csv
 
 
 class Base:

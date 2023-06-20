@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from models.base import Base
-
 """
 This module defines the Rectangle class, a subclass of the Base class.
 
@@ -20,6 +18,7 @@ Exceptions:
     None
 
 """
+from models.base import Base
 
 
 class Rectangle(Base):
