@@ -5,4 +5,4 @@
 -- complete CREATE TABLE statement, including the table name,
 -- column definitions, data types, constraints, and any other
 -- options specified during the table creation
-SHOW CREATE TABLE hbtn_0c_0.first_table;
+SHOW CREATE TABLE first_table;
