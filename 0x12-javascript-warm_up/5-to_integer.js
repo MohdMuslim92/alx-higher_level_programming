@@ -2,7 +2,7 @@
 const args = process.argv.slice(2);
 const integerNumber = parseInt(args[0]);
 if (Number.isInteger(integerNumber)) {
-  console.log('My number: ', Math.floor(args[0]));
+  console.log('My number:', Math.floor(args[0]));
 } else {
   console.log('Not a number');
 }
