@@ -14,7 +14,7 @@ def main():
     Main function that connects to the MySQL database and retrieves all cities.
     """
     if len(argv) != 4:
-        print("Usage: {} <username> <password> <db_name> <state_name>"
+        print("Usage: {} <username> <password> <db_name>"
               .format(argv[0]))
         return
     user = argv[1]
