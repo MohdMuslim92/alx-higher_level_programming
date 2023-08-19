@@ -1,9 +1,18 @@
 #!/usr/bin/python3
+"""
+This script connects to a MySQL database and retrieves data from the
+'states' table.
+"""
+
 import MySQLdb
 from sys import argv
 
 
 def main():
+    """
+    Main function that establishes a connection to the MySQL database and
+    retrieves data.
+    """
     if len(argv) != 4:
         print("Usage: {} <username> <password> <db_name>".format(argv[0]))
         return
