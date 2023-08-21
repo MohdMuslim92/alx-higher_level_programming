@@ -30,7 +30,7 @@ def main():
     for city in cities:
         state = session.query(State).filter_by(id=city.State_id).first().name
         print("{}: ({}) {}".format(state, city.id, city.name))
-    sessiton.close()
+    session.close()
 
 
 if __name__ == "__main__":
