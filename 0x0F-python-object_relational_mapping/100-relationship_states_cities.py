@@ -25,7 +25,7 @@ def main():
     db_name = argv[3]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
              user, password, db_name), pool_pre_ping=True)
-    Base.metadeta.create_all(engine)
+    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
     state = State(name="California")
