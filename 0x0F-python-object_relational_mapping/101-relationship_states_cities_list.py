@@ -27,11 +27,11 @@ def main():
              user, password, db_name), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State, City).join(
-            City, State.cities).order_by(State.id, City.id).all()
-    for state, city in states:
+    states = session.query(State).order_by(State.id).all()
+    for state in states:
         print("{}: {}".format(state.id, state.name))
-        print("\t{}: {}".format(city.id, city.name))
+        for city in state.cities:
+            print("\t{}: {}".format(city.id, city.name))
     session.close()
 
 
