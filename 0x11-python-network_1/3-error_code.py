@@ -23,8 +23,4 @@ if __name__ == "__main__":
             html = response.read().decode('ascii')
             print(html)
     except urllib.error.HTTPError as e:
-        sys.stderr.write("Error code: {}\n".format(str(e.code)))
-        sys.exit(1)
-    except Exception as e:
-        sys.stderr.write("Error: {}\n".format(str(e)))
-        sys.exit(1)
+        print("Error code: {}\n".format(str(e.code)))
