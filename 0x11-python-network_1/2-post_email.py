@@ -24,5 +24,5 @@ if __name__ == "__main__":
             html = response.read().decode('utf-8')
             print(html)
     except Exception as e:
-        sys.stderr.write("Error: {}\n".format(str(e)))
+        sys.stderr.write("Error: {}".format(str(e)))
         sys.exit(1)
