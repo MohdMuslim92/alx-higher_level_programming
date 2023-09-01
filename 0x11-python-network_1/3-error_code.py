@@ -23,4 +23,4 @@ if __name__ == "__main__":
             html = response.read().decode('ascii')
             print(html)
     except urllib.error.HTTPError as e:
-        print("Error code: {}\n".format(str(e.code)))
+        print("Error code: {}\n".format(e.code))
