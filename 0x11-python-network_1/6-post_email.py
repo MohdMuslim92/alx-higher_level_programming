@@ -18,4 +18,4 @@ if __name__ == "__main__":
 
     dect_email = {'email': email}
     response = requests.post(url, data=dect_email)
-    print("Your email is:", email)
+    print(response.text)
