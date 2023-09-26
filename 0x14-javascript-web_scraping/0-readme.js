@@ -2,10 +2,14 @@
 
 // Import the 'fs' module for file operations
 const fs = require('fs');
+const path = require('path');
+
+// Get the script name (name of the current script file)
+const scriptName = path.basename(__filename);
 
 // Check if the correct number of command-line arguments are provided
 if (process.argv.length !== 3) {
-  console.error('Usage: ./0-readme.js <file-path>');
+  console.error('Usage: ./' + scriptName + ' <file-path>');
   process.exit(1);
 }
 
